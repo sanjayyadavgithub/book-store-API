@@ -1,4 +1,5 @@
 import BookModel from "./BookModel.js";
+//create Route
 export const createBook = async (req, res) => {
   try {
     const { title, author, summary } = req.body;
@@ -18,6 +19,7 @@ export const createBook = async (req, res) => {
     res.status(400).json({success:false, errorMsg: error});
   }
 };
+//get route
 export const getBook = async (req, res) => {
   try {
     const getBook = await BookModel.find();
@@ -27,6 +29,7 @@ export const getBook = async (req, res) => {
     res.status(400).json({success:false, errorMsg: error});
   }
 };
+//get route by id
 export const getBookById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -37,6 +40,7 @@ export const getBookById = async (req, res) => {
     res.status(400).json({success:false, errorMsg: error.message});
   }
 };
+//update route by id
 export const updateBook = async (req, res) => {
   try {
     const { id } = req.params;
@@ -61,6 +65,7 @@ export const updateBook = async (req, res) => {
     res.status(400).json({success:false, errorMsg: error.message});
   }
 };
+//delete route
 export const deleteBook = async (req, res) => {
   try {
     const { id } = req.params;
