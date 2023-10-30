@@ -3,9 +3,10 @@ Book Store API for Create , Get All Book , Get book details, Update Book Details
 
 
 # project setup
-1.clone project 
-2.npm install
-3.npm start
+1. clone project
+2. npm install
+3. npm start
+
 
 # End Point 
 1. Create Book -> /api/createBook
